@@ -1,4 +1,4 @@
 # color-game
 
-##Summary
+## Summary
 Click the link in the description! Select the square matching the rgb! 
