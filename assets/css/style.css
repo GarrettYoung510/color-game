@@ -21,6 +21,11 @@ h1 {
     color: white;
 }
 
-span {
- color: white;
+
+/* id selected by octothorpe # */
+#stripe {
+    background: white;
+    height: 30px;
+    text-align: center;
+    color: black;
 }
