@@ -1,4 +1,4 @@
 # color-game
 
 ## Summary
-Click the link in the description! Select the square matching the rgb! 
+Click this link: https://garrettyoung510.github.io/color-game/. Select the square matching the rgb! 
