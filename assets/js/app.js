@@ -40,6 +40,7 @@ let squares = document.querySelectorAll(".square");
 const pickedColor = pickColor();
 let colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
+let h1 = document.querySelector("h1");
 
 colorDisplay.textContent = pickedColor;
 for (let i = 0; i < squares.length; i++) {
@@ -56,6 +57,7 @@ for (let i = 0; i < squares.length; i++) {
             // alert("Correct!");
             messageDisplay.textContent = "Correct! :D (Refresh to restart)"
             changeColors(clickedColor);
+            h1.style.backgroundColor = clickedColor;
         } else {
             // alert("WRONG!!!");
             // changes to background color(like a hide) when clicked incorrectly
