@@ -1,14 +1,5 @@
 console.log('connected');
 
-const colors = [
-    "rgb(255, 0, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 0, 255)",
-    "rgb(0, 255, 255)",
-    "rgb(255, 255, 0)",
-    "rgb(255, 0, 255)",
-]
-
 let changeColors = (color) => {
     for(let i = 0; i < colors.length; i++){
         squares[i].style.backgroundColor = color;
@@ -20,8 +11,32 @@ let pickColor = () => {
     return colors[random];
 }
 
-let squares = document.querySelectorAll(".square");
+// function to generate random rgb
+let randomColor = () => {
+    // pick a red from 0 - 255
+    let r = Math.floor(Math.random() * 256);
+    // pick a green from 0 - 255
+    let g = Math.floor(Math.random() * 256);
+    // pick a blue from 0 - 255
+    let b = Math.floor(Math.random() * 256);
+    // rgb(r, g, b)
+    return `rgb(${r}, ${g}, ${b})`;
+}
 
+let generateRandomColors = (num) => {
+    // make an array
+    let arr = [];
+    // add num random colors to array
+    for(let i = 0; i < num; i++){
+        // get random color and push into arr
+        arr.push(randomColor());
+    }
+    // return that array
+    return arr;
+}
+
+let colors = generateRandomColors(6);
+let squares = document.querySelectorAll(".square");
 const pickedColor = pickColor();
 let colorDisplay = document.getElementById("colorDisplay");
 let messageDisplay = document.querySelector("#message");
