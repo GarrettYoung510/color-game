@@ -1,6 +1,8 @@
 body {
     background-color: #232323;
     /* set background as black */
+    margin: 0;
+    font-family: "Montserrat", "Avenir";
 }
 
 .square {
@@ -10,22 +12,74 @@ body {
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    /* round corners */
+    border-radius: 15%;
+    /* transitions background color at certain time */
+    transition: background 1.0s;
+    /* make this available in safari */
+    -webkit-transition: background 1.0s;
+    /* add support for mozilla */
+    -moz-transition: background 1.0s;
 }
 
 #container {
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 600px;
 }
 
 h1 {
+    text-align: center;
+    line-height: 1.1;
+    font-weight: normal;
     color: white;
+    background: steelblue;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 20px 0;
 }
 
+#colorDisplay {
+    font-size: 200%;
+}
 
+#message {
+    display: inline-block;
+    width: 20%;
+}
 /* id selected by octothorpe # */
 #stripe {
     background: white;
     height: 30px;
     text-align: center;
     color: black;
+}
+
+.selected {
+    color: white;
+    background: steelblue;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    /* inherits font size from the parent */
+    font-size: inherit;
+    /* whenever an effect occurs takes time to transition */
+    transition: all 0.5s;
+    /* support for safari */
+    -webkit-transition: all 0.5s;
+    /* add support for mozilla */
+    -moz-transition: all 0.5s;
+    outline: none;
+}
+
+/* hover effect */
+button:hover {
+    color: white;
+    background: steelblue;
 }
